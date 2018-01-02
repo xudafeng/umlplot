@@ -1,0 +1,68 @@
+{
+  "name": "umlplot",
+  "version": "1.0.0",
+  "description": "umlplot",
+  "keywords": [
+    "plot"
+  ],
+  "main": "/dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xudafeng/umlplot"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.22.0",
+    "co-mocha": "*",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.10.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "forkmeon.github.io": "^1.1.13",
+    "istanbul": "*",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "macaca-cli": "^2.0.12",
+    "macaca-coverage": "^1.0.0",
+    "macaca-electron": "^1.1.17",
+    "macaca-reporter": "^1.0.36",
+    "macaca-wd": "^1.0.18",
+    "mermaid": "^7.1.2",
+    "mocha": "*",
+    "pako": "^1.0.6",
+    "pre-commit": "*",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.19.1",
+    "utf8-bytes": "^0.0.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "xutil": "^1.0.9"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "dev:test": "cross-env NODE_ENV=test webpack-dev-server",
+    "lint": "eslint --fix lib editor test",
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "prepublish": "npm run build",
+    "serve": "npm run dev:test &",
+    "test": "macaca run -d ./test --reporter macaca-reporter",
+    "ci": "npm run lint && npm run serve && npm run test"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "license": "MIT"
+}
