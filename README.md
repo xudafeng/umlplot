@@ -17,7 +17,7 @@
 [download-image]: https://img.shields.io/npm/dm/umlplot.svg?style=flat-square
 [download-url]: https://npmjs.org/package/umlplot
 
-> umlplot
+> uml plot
 
 ## Installment
 
