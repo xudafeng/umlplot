@@ -19,11 +19,10 @@
 
 > uml plot
 
-## Installment
+## Links
 
-```bash
-$ npm i umlplot --save-dev
-```
+- [plantuml](//xudafeng.github.io/umlplot/plantuml.html)
+- [mermaid](//xudafeng.github.io/umlplot/mermaid.html)
 
 ## License
 
