@@ -8,7 +8,7 @@ import './plantuml.less';
 import _ from './utils';
 import pkg from '../package';
 
-const data = _.getUrlParams('data');
+const data = _.getHashData();
 
 class Page extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class Page extends React.Component {
 
   getEncoded() {
     const encoded = _.encode(this.state.text);
-    const str = `?data=${encoded}`;
+    const str = `#data=${encoded}`;
     history.replaceState({}, document.title, str);
     return encoded;
   }

@@ -26,19 +26,7 @@ exports.decode = text => {
   return Utf8ArrayToStr(inflated);
 };
 
-exports.getUrlParams = k => {
-  var params = {};
-  var url = location.href;
-  var idx = url.indexOf('?');
-
-  if (idx > 0) {
-    var queryStr = url.substring(idx + 1);
-    var args = queryStr.split('&');
-    for (var i = 0; i < args.length; i++) {
-      var a = args[i];
-      var nv = args[i] = a.split('=');
-      params[nv[0]] = nv.length > 1 ? nv[1] : true;
-    }
-  }
-  return params[k];
+exports.getHashData = () => {
+  var hash = location.hash;
+  return hash.split('#data=')[1];
 };

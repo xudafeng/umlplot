@@ -22,7 +22,9 @@ mermaid.initialize({
   }
 });
 
-const data = _.getUrlParams('data');
+window.mermaid = mermaid;
+
+const data = _.getHashData();
 
 class Page extends React.Component {
   constructor(props) {
@@ -47,7 +49,7 @@ class Page extends React.Component {
 
   getEncoded() {
     const encoded = _.encode(this.state.text);
-    const str = `?data=${encoded}`;
+    const str = `#data=${encoded}`;
     history.replaceState({}, document.title, str);
   }
 
